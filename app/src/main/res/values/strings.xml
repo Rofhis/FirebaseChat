@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FirebaseChat</string>
+    <string name="firebase_url">https://ufree.firebaseio.com/</string>
+</resources>

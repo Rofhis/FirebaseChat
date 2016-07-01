@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "za.co.hellogroup.firebasechat"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.firebase:firebase-client-android:2.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'net.my.package:xmppserver:1.0.0@aar'
+    compile 'io.reactivex:rxandroid:0.23.0'
+}

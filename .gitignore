@@ -1,0 +1,35 @@
+### Android gitignore Template - VS/07/06/16 ###
+ 
+# Gradle files
+.gradle/
+build/
+**/build/*
+ 
+# Other generated files
+gen/
+output/
+out/
+bin/
+ 
+# Java class files
+*.class
+**/*.class
+ 
+# Local Files
+local.properties
+ 
+# IntelliJ/Android Studio Related
+*.iml
+**/*.iml
+*.apk
+*.aar
+*.zip
+.idea/
+.navigation/
+ 
+# Others
+*.log
+ 
+# OS generated files
+.DS_Store*
+Thumbs.db
